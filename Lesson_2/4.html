@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+<body>
+<!--
+Обязательное задание.
+
+Необходимо реализовать четыре функции, каждая функция должна принимать по два
+числа и выполнять одну из операций (каждая функция выполняет одну из них):
+1. Сложение
+2. Разность
+3. Умножение
+4. Деление
+
+Необходимо сделать так, чтобы функция вернула число, например выражение
+`console.log(sum(2, 6));` должно вывести число 8 в консоль (sum - функция
+сложения в данном примере, ваши названия функций могут отличаться).
+
+Округлять значения, которые возвращают функции не нужно, однако, обратите
+внимание на разность, функция должна вычесть из большего числа меньшее, либо
+вернуть 0, если числа равны.
+
+Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать
+не нужно.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+<script>
+  "use strict";
+
+  /**
+   * Функция sum складывает два числа
+   * @param {number} num1 - Первое число
+   * @param {number} num2 - Второе число
+   * @return {number} - Сумма двух чисел
+  */
+  function sum (num1, num2) {
+    return num1 + num2;
+  }
+
+  /**
+   * Функция difference вычитает из большего числа меньшее
+   * @param {number} num1 - Первое число
+   * @param {number} num2 - Второе число
+   * @return {number} - Разность двух чисел
+  */
+  function difference (num1, num2) {
+    if (num1 === num2) {
+      return 0;
+    } else if (num1 > num2) {
+      return num1 - num2;
+    } else {
+      return num2 -num1;
+    }
+  }
+
+  /**
+   * Функция mult перемножает два числа
+   * @param {number} num1 - Первое число
+   * @param {number} num2 - Второе число
+   * @returns {number} Произведение двух чисел
+  */
+  function mult (num1, num2) {
+    return num1 * num2;
+  }
+
+  /**
+   * Функция division производит деление одного числа на другое
+   * @param {number} num1 - Первое число
+   * @param {number} num2 - Второе число
+   * @returns {number} Результат деления num1 на num2
+  */
+  function division (num1, num2) {
+    return num1 / num2;
+  }
+
+  console.log(sum(3, 5));
+  console.log(mult(3, 5));
+  console.log(division(3, 5));
+  console.log(difference(3, 5));
+
+</script>
+</body>
+</html>
